@@ -62,9 +62,6 @@
 				// apply fog
 				UNITY_APPLY_FOG(i.fogCoord, col);
 
-				float2 unit = float2(1.0 / _TextureWidth, 1.0 / _TextureHeight);
-				float2 relativePosition = float2(i.texcoord.x, i.texcoord.y);
-
 				if ( (i.texcoord.y+_TimeStamp) % _ModFrequency <= _Thickness) {
 					return col * _ScanMultiplier;
 				}
