@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sepia
-  m_Shader: {fileID: 4800000, guid: 3b0a9aadc5f480442ba4e4629e37c2f9, type: 3}
+  m_Name: Greyscale
+  m_Shader: {fileID: 4800000, guid: 74c670a72f6679248a5f4f682d7590ee, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
