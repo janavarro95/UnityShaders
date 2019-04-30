@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.ShaderScripts
 {
-    public class BlackAndWhite:VideoToTexture
+    public class BlackAndWhite : VideoToTexture
     {
         public enum BlackAndWhiteModes
         {
@@ -23,12 +23,13 @@ namespace Assets.Scripts.ShaderScripts
         public float cutOff;
         public override void shaderPass()
         {
+            if (isCamera) return;
             MaterialPropertyBlock mpb = new MaterialPropertyBlock();
             meshRenderer.GetPropertyBlock(mpb);
             mpb.SetFloat("_CutOff", cutOff);
             mpb.SetInt("_Mode", (int)currentMode);
             meshRenderer.SetPropertyBlock(mpb);
         }
-
     }
+
 }

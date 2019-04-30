@@ -19,6 +19,7 @@ namespace Assets.Scripts
 
         public override void shaderPass()
         {
+            if (isCamera) return;
             MaterialPropertyBlock mpb = new MaterialPropertyBlock();
             meshRenderer.GetPropertyBlock(mpb);
             mpb.SetColor("_TintColor", color);

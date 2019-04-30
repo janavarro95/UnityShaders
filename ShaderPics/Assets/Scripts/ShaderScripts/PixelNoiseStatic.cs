@@ -23,6 +23,7 @@ namespace Assets.Scripts.ShaderScripts
 
         public override void shaderPass()
         {
+            if (isCamera) return;
             Vector2 random = randomValues();
             MaterialPropertyBlock mpb = new MaterialPropertyBlock();
             meshRenderer.GetPropertyBlock(mpb);

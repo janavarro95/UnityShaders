@@ -17,20 +17,31 @@ public class VideoToTexture : MonoBehaviour
         }
     }
     public RawImage rawImage;
-    public bool useWebTextureHeight=false;
+    public bool useWebTextureHeight = false;
     public MeshRenderer meshRenderer;
-    
+
+    public bool isCamera;
 
     public virtual void Start()
     {
         GameManager.InitializeVideoCamera();
+        cameraCheck();
         getRenderSurface();
         GameManager.PlayVideoCamera();
-        
+
+    }
+
+    public virtual void cameraCheck()
+    {
+        if (this.gameObject.GetComponent<CameraShaderControl>() != null)
+        {
+            isCamera = true;
+        }
     }
 
     public virtual void getRenderSurface()
     {
+        if (isCamera) return;
         rawImage = this.gameObject.GetComponent<RawImage>();
         rawImage.texture = webTexture;
         rawImage.material.mainTexture = webTexture;

@@ -27,6 +27,7 @@ namespace Assets.Scripts.ShaderScripts
 
         public override void Update()
         {
+            if (isCamera) return;
             timeStamp += timeStep;
             base.Update();
         }
