@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: e977732b6ec167946b38bbebc1dbbc48, type: 3}
+  m_Name: HorizontalMove
+  m_Shader: {fileID: 4800000, guid: a84310b51a4213f4f870b8149891ad12, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

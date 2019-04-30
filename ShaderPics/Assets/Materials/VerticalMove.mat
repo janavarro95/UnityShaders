@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: e977732b6ec167946b38bbebc1dbbc48, type: 3}
+  m_Name: VerticalMove
+  m_Shader: {fileID: 4800000, guid: 9e40ef5ddfff7ba4e9ffd0c568fc7cb3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
