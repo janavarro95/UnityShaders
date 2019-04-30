@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FunHouseVerticalMirror
-  m_Shader: {fileID: 4800000, guid: f8789cc3cdb5f444f8682d8484a6117e, type: 3}
+  m_Name: Mirror
+  m_Shader: {fileID: 4800000, guid: 72cfa6baa82f2994f90159534b8207df, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -70,7 +70,6 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeStamp: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
