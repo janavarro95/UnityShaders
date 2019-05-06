@@ -1,4 +1,4 @@
-﻿Shader "Custom/Unlit/EdgeDetection"
+﻿Shader "Custom/Unlit/EdgeDetectionV2"
 {
 	Properties
 	{
@@ -6,6 +6,8 @@
 		[PerRendererData]_CutOff("_CutOff",float) = 0.4
 		[PerRendererData]_TextureWidth("_TextureWidth",float) = 640
 		[PerRendererData]_TextureHeight("_TextureHeight", float) = 480
+		[PerRendererData]_BackgroundColor("_BackgroundColor",Color)=(1,1,1,1)
+		[PerRendererData]_OutlineColor("_OutlineColor",Color)=(1,1,1,1)
 	}
 		SubShader
 		{
@@ -30,6 +32,8 @@
 
 				float _TextureWidth;
 				float _TextureHeight;
+				fixed4 _BackgroundColor;
+				fixed4 _OutlineColor;
 
 				v2f vert(appdata_t IN)
 				{
@@ -49,6 +53,18 @@
 
 					fixed4 mix = (col1*weight) + (col2*(1.0 - weight));
 					return mix;
+				}
+
+				fixed4 avgColor(fixed4 col) {
+					float avg = col.r + col.g + col.b;
+					avg = avg / 3.0;
+
+					if (avg < _CutOff) {
+						return fixed4(_OutlineColor.r, _OutlineColor.g, _OutlineColor.b, 1.0);
+					}
+					else {
+						return fixed4(_BackgroundColor.r, _BackgroundColor.g, _BackgroundColor.b, 1);
+					}
 				}
 
 				fixed4 frag(v2f i) : SV_Target
@@ -98,7 +114,7 @@
 					
 					fixed4 actualEdgePix = fixed4(edgePix.r, edgePix.g, edgePix.b, edgePix.a);
 
-					return  blend(actualEdgePix,col , 1.0);
+					return avgColor(blend(actualEdgePix,col , 1.0));
 
 
 

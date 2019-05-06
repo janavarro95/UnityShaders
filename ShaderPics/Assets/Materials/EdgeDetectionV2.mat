@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EdgeDetection
-  m_Shader: {fileID: 4800000, guid: db4e74720bb43344d9c4b163f4922281, type: 3}
+  m_Name: EdgeDetectionV2
+  m_Shader: {fileID: 4800000, guid: 057104bc0819165489aba538bebee900, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
